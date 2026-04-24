@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 
 // ==========================================
-// ÍCONES EMBUTIDOS (Substitui o lucide-react)
+// ÍCONES EMBUTIDOS (Com regras do TypeScript ajustadas)
 // ==========================================
-const Icon = ({ children, size = 24, className = "" }) => (
+const Icon = ({ children, size = 24, className = "" }: any) => (
   <svg
     width={size}
     height={size}
@@ -18,24 +18,24 @@ const Icon = ({ children, size = 24, className = "" }) => (
     {children}
   </svg>
 );
-const MessageCircle = ({ size, className }) => (
+const MessageCircle = ({ size = 24, className = "" }: any) => (
   <Icon size={size} className={className}>
     <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
   </Icon>
 );
-const ShieldCheck = ({ size, className }) => (
+const ShieldCheck = ({ size = 24, className = "" }: any) => (
   <Icon size={size} className={className}>
     <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
     <path d="m9 12 2 2 4-4" />
   </Icon>
 );
-const Clock = ({ size, className }) => (
+const Clock = ({ size = 24, className = "" }: any) => (
   <Icon size={size} className={className}>
     <circle cx="12" cy="12" r="10" />
     <path d="M12 6v6l4 2" />
   </Icon>
 );
-const FileSearch = ({ size, className }) => (
+const FileSearch = ({ size = 24, className = "" }: any) => (
   <Icon size={size} className={className}>
     <path d="M14 2v4a2 2 0 0 0 2 2h4" />
     <path d="M4.268 21a2 2 0 0 0 1.727 1H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v3" />
@@ -43,37 +43,37 @@ const FileSearch = ({ size, className }) => (
     <circle cx="5" cy="14" r="3" />
   </Icon>
 );
-const CheckCircle2 = ({ size, className }) => (
+const CheckCircle2 = ({ size = 24, className = "" }: any) => (
   <Icon size={size} className={className}>
     <circle cx="12" cy="12" r="10" />
     <path d="m9 12 2 2 4-4" />
   </Icon>
 );
-const ChevronDown = ({ size, className }) => (
+const ChevronDown = ({ size = 24, className = "" }: any) => (
   <Icon size={size} className={className}>
     <path d="m6 9 6 6 6-6" />
   </Icon>
 );
-const Menu = ({ size, className }) => (
+const Menu = ({ size = 24, className = "" }: any) => (
   <Icon size={size} className={className}>
     <line x1="4" x2="20" y1="12" y2="12" />
     <line x1="4" x2="20" y1="6" y2="6" />
     <line x1="4" x2="20" y1="18" y2="18" />
   </Icon>
 );
-const X = ({ size, className }) => (
+const X = ({ size = 24, className = "" }: any) => (
   <Icon size={size} className={className}>
     <path d="M18 6 6 18" />
     <path d="m6 6 12 12" />
   </Icon>
 );
-const MapPin = ({ size, className }) => (
+const MapPin = ({ size = 24, className = "" }: any) => (
   <Icon size={size} className={className}>
     <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
     <circle cx="12" cy="10" r="3" />
   </Icon>
 );
-const Scale = ({ size, className }) => (
+const Scale = ({ size = 24, className = "" }: any) => (
   <Icon size={size} className={className}>
     <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" />
     <path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" />
@@ -82,23 +82,23 @@ const Scale = ({ size, className }) => (
     <path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2" />
   </Icon>
 );
-const Brain = ({ size, className }) => (
+const Brain = ({ size = 24, className = "" }: any) => (
   <Icon size={size} className={className}>
     <path d="M9.5 2A5.5 5.5 0 0 0 4 7.5c0 1.63.71 3.1 1.83 4.12.11.1.2.22.25.35.4.92.2 2.03-.5 2.53a3.5 3.5 0 1 0 4.92 4.92c.5-.7 1.61-.9 2.53-.5.13.05.25.14.35.25A5.5 5.5 0 0 0 22 14.5c0-1.63-.71-3.1-1.83-4.12a.65.65 0 0 1-.25-.35c-.4-.92-.2-2.03.5-2.53a3.5 3.5 0 1 0-4.92-4.92c-.5.7-1.61.9-2.53.5a.65.65 0 0 1-.35-.25A5.5 5.5 0 0 0 9.5 2z" />
   </Icon>
 );
-const GraduationCap = ({ size, className }) => (
+const GraduationCap = ({ size = 24, className = "" }: any) => (
   <Icon size={size} className={className}>
     <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
     <path d="M6 12v5c3 3 9 3 12 0v-5" />
   </Icon>
 );
-const Zap = ({ size, className }) => (
+const Zap = ({ size = 24, className = "" }: any) => (
   <Icon size={size} className={className}>
     <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
   </Icon>
 );
-const HeartHandshake = ({ size, className }) => (
+const HeartHandshake = ({ size = 24, className = "" }: any) => (
   <Icon size={size} className={className}>
     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
     <path d="M12 15v3.8l-1.3 1.2c-.4.4-1.1.4-1.5 0l-1.6-1.5c-.8-.8-.8-2.1 0-2.9l1.4-1.3" />
@@ -106,7 +106,7 @@ const HeartHandshake = ({ size, className }) => (
     <path d="M12 15l2 1.8c.4.4 1.1.4 1.5 0l2.3-2.1" />
   </Icon>
 );
-const FileText = ({ size, className }) => (
+const FileText = ({ size = 24, className = "" }: any) => (
   <Icon size={size} className={className}>
     <path d="M14 2v4a2 2 0 0 0 2 2h4" />
     <path d="M10 9H8" />
@@ -115,7 +115,7 @@ const FileText = ({ size, className }) => (
     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
   </Icon>
 );
-const Gavel = ({ size, className }) => (
+const Gavel = ({ size = 24, className = "" }: any) => (
   <Icon size={size} className={className}>
     <path d="m14 13-5 5" />
     <path d="m15 16-5 5" />
@@ -127,13 +127,13 @@ const Gavel = ({ size, className }) => (
     <path d="m13 19-5-5" />
   </Icon>
 );
-const Home = ({ size, className }) => (
+const Home = ({ size = 24, className = "" }: any) => (
   <Icon size={size} className={className}>
     <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
     <polyline points="9 22 9 12 15 12 15 22" />
   </Icon>
 );
-const Users = ({ size, className }) => (
+const Users = ({ size = 24, className = "" }: any) => (
   <Icon size={size} className={className}>
     <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
     <circle cx="9" cy="7" r="4" />
@@ -141,7 +141,7 @@ const Users = ({ size, className }) => (
     <path d="M16 3.13a4 4 0 0 1 0 7.75" />
   </Icon>
 );
-const Briefcase = ({ size, className }) => (
+const Briefcase = ({ size = 24, className = "" }: any) => (
   <Icon size={size} className={className}>
     <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
     <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
@@ -161,7 +161,6 @@ const App = () => {
   };
 
   useEffect(() => {
-    // ESTA É A MÁGICA QUE IMPEDE QUE FIQUE DESCONFIGURADO NO CODESANDBOX
     if (!document.getElementById("tailwind-cdn")) {
       const script = document.createElement("script");
       script.id = "tailwind-cdn";
@@ -176,11 +175,10 @@ const App = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Contacto WhatsApp com nome completo na mensagem
   const whatsappLink =
     "https://wa.me/5551997278848?text=Olá Dr. Flávio D. Alcaraz Gomes, gostaria de uma consultoria jurídica.";
 
-  const SectionTitle = ({ children, light = false, className = "" }) => (
+  const SectionTitle = ({ children, light = false, className = "" }: any) => (
     <h2
       className={`text-3xl md:text-5xl font-bold mb-6 leading-tight text-center ${
         light ? "text-white" : "text-[#1b1d2f]"
@@ -191,12 +189,13 @@ const App = () => {
     </h2>
   );
 
-  const GoldButton = ({ children, className = "" }) => (
+  const GoldButton = ({ children, className = "", onClick }: any) => (
     <a
       href={whatsappLink}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#c5a059] text-white rounded-md font-bold text-lg hover:bg-[#b38f4d] transition-all transform hover:scale-105 shadow-lg ${className}`}
+      onClick={onClick}
+      className={`inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#c5a059] text-white rounded-md font-bold text-lg hover:bg-[#b38f4d] transition-all transform hover:scale-105 shadow-lg cursor-pointer ${className}`}
       style={{ fontFamily: "Libre Baskerville, serif" }}
     >
       <MessageCircle size={22} />
